@@ -7,5 +7,5 @@
 
 	<context:annotation-config />
 	
-	<context:component-scan base-package="com.sample" />
+	<context:component-scan base-package="com.sample.init" />
 </beans>

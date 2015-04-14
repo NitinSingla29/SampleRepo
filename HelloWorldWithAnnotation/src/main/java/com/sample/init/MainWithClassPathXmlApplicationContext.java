@@ -1,21 +1,28 @@
 package com.sample.init;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.sample.component.HelloWorld;
+import com.sample.component.WelcomeComponent;
+
 @Configuration
-public class Main {
+public class MainWithClassPathXmlApplicationContext {
 	
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext(
 				"SpringBeans.xml");
 
 		HelloWorld helloWorld = (HelloWorld) context.getBean(HelloWorld.class);
-		helloWorld.setName("Nitin");
+		String name = "Nitin";
+		helloWorld.setName(name);
 		helloWorld.printHello();
+		
+		WelcomeComponent welcomeComponent = (WelcomeComponent) context.getBean(WelcomeComponent.class);
+		welcomeComponent.sayHello(name);
 	}
 
 	@Bean
