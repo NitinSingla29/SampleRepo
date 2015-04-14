@@ -1,6 +1,5 @@
 package com.sample.init;
 
-
 public class HelloWorld {
 	private String name;
  
