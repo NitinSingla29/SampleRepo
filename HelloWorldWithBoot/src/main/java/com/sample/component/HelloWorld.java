@@ -1,4 +1,4 @@
-package com.sample.init;
+package com.sample.component;
 
 public class HelloWorld {
 	private String name;

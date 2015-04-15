@@ -1,7 +1,7 @@
 package com.sample.init;
 
 
-public class Main {
+public class MainWithBoot {
 	
 	public static void main(String[] args) {
 	}
